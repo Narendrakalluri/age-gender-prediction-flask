@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+
+<section id="hero">
+    <video playsinline autoplay muted loop poster="" id="bgvid">
+        <source src="{{url_for('static', filename = 'videos/ScreenFlow-3.mp4')}}" type="video/mp4">
+  
+      </video>
+    <div class="hero-container">
+      <h1>Welcome to Age and Gender Prediction</h1>
+      <h2>We Predict Age and Gender</h2>
+    <div>
+      <a href="{{url_for('live_predict')}}" class="btn-get-started">Age and Gender Prediction</a>
+	  
+    </form>
+
+    </div>
+    </div>
+    
+  </section><!-- #hero -->
+{% endblock %}

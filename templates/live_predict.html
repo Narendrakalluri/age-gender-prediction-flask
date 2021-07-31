@@ -1,0 +1,33 @@
+
+{% extends "base.html" %} {% block content %}
+  <body class="total">
+	<section class="u-align-center u-clearfix u-palette-3-dark-3 u-section-1" id="carousel_a5fe">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="u-clearfix u-expanded-width u-gutter-42 u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div class="u-container-style u-layout-cell u-left-cell u-size-32-lg u-size-32-md u-size-32-sm u-size-32-xs u-size-35-xl u-layout-cell-1">
+            <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs">
+              <div class="u-border-16 u-border-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
+              <img class="u-image u-image-1" src="{{ url_for('video_feed') }}">
+            </div>
+          </div>
+          <div class="u-container-style u-layout-cell u-right-cell u-size-25-xl u-size-28-lg u-size-28-md u-size-28-sm u-size-28-xs u-layout-cell-2">
+            <div class="u-container-layout u-container-layout-2">
+              <h2 class="u-custom-font u-font-oswald u-text u-text-palette-1-base u-text-1">AGE AND GENDER PREDICTION</h2>
+	<form action='/predict' method='POST'>
+		<button type="submit" class="btn btn-primary btn-lg " id="btn-predict">PREDICT</button></form>
+	</form>
+	</td></tr>
+	</table>
+	<p class="age">{{ age }}</p>
+	<p class="gender"> {{ gender }}</p>
+	<p class="para">{{ n }}</p>
+              <a href="{{ url_for('home') }}" class="btn-back">&#128408;Back</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  {% endblock %}
